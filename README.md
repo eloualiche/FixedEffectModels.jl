@@ -41,7 +41,7 @@ reg(df, @formula(Sales ~ NDI + fe(State) + fe(Year)), Vcov.cluster(:State), weig
 	```julia
 	reg(df, @formula(Sales ~ Price + fe(State) + fe(Year)))
 	reg(df, @formula(Sales ~ NDI + fe(State) + fe(State)&Year))
-	reg(df, @formula(Sales ~ NDI + fe(State)&fe(Year)))
+	reg(df, @formula(Sales ~ NDI + fe(State)&fe(Year)))           # illustrative only, this will not run
 	reg(df, @formula(Sales ~ (Price ~ Pimin)))
 	```
 
